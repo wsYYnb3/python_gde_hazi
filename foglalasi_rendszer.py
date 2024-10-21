@@ -10,9 +10,9 @@ class FoglalasiRendszer:
         self.rendszer_inditasa()
 
     def rendszer_inditasa(self):
-        jarat1 = BelfoldiJarat("PA101", "Budapest", 15000, [datetime(2024, 12, 1)], datetime(2024, 12, 1, 14, 0), 100)
-        jarat2 = BelfoldiJarat("PA102", "Debrecen", 12000, [datetime(2024, 12, 2)], datetime(2024, 12, 2, 10, 0), 80)
-        jarat3 = NemzetkoziJarat("PA201", "London", 45000, [datetime(2024, 12, 3)], datetime(2024, 12, 3, 16, 0), 150)
+        jarat1 = BelfoldiJarat("PA101", "Budapest", "Eger", 5000, [datetime(2024, 12, 1)], datetime(2024, 12, 1, 14, 0), 100, 20)  
+        jarat2 = BelfoldiJarat("PA102", "Budapest","Debrecen", 2000, [datetime(2024, 12, 2)], datetime(2024, 12, 2, 10, 0), 80, 20)  
+        jarat3 = NemzetkoziJarat("PA201","Budapest", "London", 25000, [datetime(2024, 12, 3)], datetime(2024, 12, 3, 16, 0), 150, 180) 
         self.legi_tarsasag.jarat_hozzaadasa(jarat1)
         self.legi_tarsasag.jarat_hozzaadasa(jarat2)
         self.legi_tarsasag.jarat_hozzaadasa(jarat3)
