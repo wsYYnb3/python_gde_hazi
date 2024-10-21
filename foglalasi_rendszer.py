@@ -10,19 +10,19 @@ class FoglalasiRendszer:
         self.rendszer_inditasa()
 
     def rendszer_inditasa(self):
-        jarat1 = BelfoldiJarat("PA101", "Budapest", "Eger", 5000, [datetime(2024, 12, 1)], datetime(2024, 12, 1, 14, 0), 100, 20)  
-        jarat2 = BelfoldiJarat("PA102", "Budapest","Debrecen", 2000, [datetime(2024, 12, 2)], datetime(2024, 12, 2, 10, 0), 80, 20)  
-        jarat3 = NemzetkoziJarat("PA201","Budapest", "London", 25000, [datetime(2024, 12, 3)], datetime(2024, 12, 3, 16, 0), 150, 180) 
+        jarat1 = BelfoldiJarat("PA101", "Budapest", "Eger", 5000, [datetime(2024, 12, 1, 14, 0)],  100, 20)  
+        jarat2 = BelfoldiJarat("PA102", "Budapest","Debrecen", 2000, [datetime(2024, 12, 2, 10, 0)],  80, 20)  
+        jarat3 = NemzetkoziJarat("PA201","Budapest", "London", 25000, [datetime(2024, 12, 3, 12, 0),datetime(2024, 12, 4, 11, 0)],  150, 180) 
         self.legi_tarsasag.jarat_hozzaadasa(jarat1)
         self.legi_tarsasag.jarat_hozzaadasa(jarat2)
         self.legi_tarsasag.jarat_hozzaadasa(jarat3)
 
-        self.foglalasok.append(JegyFoglalas("Nagy Anna", jarat1, datetime(2024, 12, 1)))
-        self.foglalasok.append(JegyFoglalas("Kiss Béla", jarat2, datetime(2024, 12, 2)))
-        self.foglalasok.append(JegyFoglalas("Szabó Csaba", jarat3, datetime(2024, 12, 3)))
-        self.foglalasok.append(JegyFoglalas("Tóth Dóra", jarat1, datetime(2024, 12, 5)))
-        self.foglalasok.append(JegyFoglalas("Horváth Erik", jarat2, datetime(2024, 12, 6)))
-        self.foglalasok.append(JegyFoglalas("Varga Fanni", jarat3, datetime(2024, 12, 7)))
+        self.foglalasok.append(JegyFoglalas("Nagy Anna", jarat1, datetime(2024, 12, 1, 14, 0)))
+        self.foglalasok.append(JegyFoglalas("Kiss Béla", jarat2, datetime(2024, 12, 2, 10 ,0)))
+        self.foglalasok.append(JegyFoglalas("Szabó Csaba", jarat3, datetime(2024, 12, 3, 12, 0)))
+        self.foglalasok.append(JegyFoglalas("Tóth Dóra", jarat1, datetime(2024, 12, 1, 14, 0)))
+        self.foglalasok.append(JegyFoglalas("Horváth Erik", jarat2, datetime(2024, 12, 2,10,0)))
+        self.foglalasok.append(JegyFoglalas("Varga Fanni", jarat3, datetime(2024, 12, 4,11,0)))
 
     def foglalas_letrehozasa(self):
         utas_nev = input("Adja meg az utas nevét: ")
